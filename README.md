@@ -6,7 +6,9 @@ Requires Python 3.3+ with nagiosplugin and argparse python modules
 
 Installation
 ============
-- Install pip with your distribution's package manager
+- Install pip with your distribution's package manager:
+-- Debian: `sudo apt-get install python-pip`
+-- RedHat: `sudo yum install python-pip`
 - `sudo pip install nagiosplugin argparse`
 - copy `check_varnish.py` into desired location
 - Enjoy!

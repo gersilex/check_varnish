@@ -7,7 +7,7 @@ Requires Python 3.3+ with nagiosplugin and argparse python modules
 Installation
 ============
 - Install pip with your distribution's package manager
-- `sudo pip install nagiosplugin`
+- `sudo pip install nagiosplugin argparse`
 - copy `check_varnish.py` into desired location
 - Enjoy!
 

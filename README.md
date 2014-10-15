@@ -2,12 +2,12 @@ check_varnish
 =============
 
 nagios plugin for Varnish 4+
-Requires Python 3 and nagiosplugin python module
+Requires Python 3.3+ with nagiosplugin and argparse python modules
 
 Installation
 ============
 - Install pip with your distribution's package manager
-- `pip install nagiosplugin`
+- `sudo pip install nagiosplugin`
 - copy `check_varnish.py` into desired location
 - Enjoy!
 

@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python2
 #
 # Nagios Plugin for Varnish 4
 # ---------------------------
@@ -22,7 +22,7 @@
 Current version checks only one metric with optional warning and critical ranges."""
 
 __author__ = 'lfoerster@goodgamestudios.com'
-__version__ = "1.0"
+__version__ = "1.1"
 
 import sys
 import argparse
@@ -37,11 +37,11 @@ class Varnish(nagiosplugin.Resource):
 
     def probe(self):
         command = runcommand(options.path + " -1")
-        command = str(command, encoding="utf-8")
+        command = str(command)
         lines = command.splitlines()
 
         for line in lines:
-            if self.metric in str(line).split(maxsplit=1):
+            if self.metric in str(line).split():
                 words = line.split()
                 return nagiosplugin.Metric(name=words[0], value=int(words[1]), context="Varnish")
 
@@ -62,7 +62,7 @@ o.add_argument('-V', '--version', action="version", version=__version__)
 options = o.parse_args()
 
 if options.list:
-    print(str(runcommand(options.path + " -1"), "utf-8"))
+    print(str(runcommand(options.path + " -1")))
     sys.exit(3)
 
 nagiosplugin.Check(Varnish(str(options.metric)),

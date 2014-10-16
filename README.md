@@ -1,7 +1,7 @@
 check_varnish
 =============
 
-nagios plugin for Varnish 4+
+Nagios plugin for Varnish 4+
 Requires Python 2.7 with nagiosplugin and argparse python modules
 
 Installation

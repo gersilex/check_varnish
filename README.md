@@ -2,18 +2,13 @@ check_varnish
 =============
 
 nagios plugin for Varnish 4+
-Requires Python 3 with nagiosplugin and argparse python modules
+Requires Python 2.7 with nagiosplugin and argparse python modules
 
 Installation
 ============
 - Install dependencies:
-  - `cd /tmp`
-  - `wget https://pypi.python.org/packages/source/n/nagiosplugin/nagiosplugin-1.2.2.tar.gz#md5=c85e1641492d606d929b02aa262bf55d`
-  - ``wget https://pypi.python.org/packages/source/a/argparse/argparse-1.2.1.tar.gz#md5=2fbef8cb61e506c706957ab6e135840c`
-  - `tar xvzf <package-name.tar.gz>`
-  - `cd <package-name>`
-  - `python3 setup.py install` in each of the packages. All of them have a `setup.py` included, which takes commands just like `pip` would on Python 2.7
-- copy `check_varnish.py` into desired location
+  - `yum install python-pip` or `apt-get install python-pip`
+  - `pip install argparse nagiosplugin`
 - Enjoy!
 
 ```
